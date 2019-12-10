@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fancy-weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+<link href="style.css" rel="stylesheet"></head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <section class="block-control">
+            <div class="button-controls">
+                <button class="button-controls__default button-controls__switch-back" id="button-refresh">
+                    <img src="img/refresh.svg" alt="refresh">
+                </button>
+                <select class="button-controls__default button-controls__language" id="language">
+                    <option value="eng">EN</option>
+                    <option value="rus">RU</option>
+                    <option value="bel">BE</option>
+                </select>
+                <ul class="list-measure-buttons">
+                    <li class="list-measure-buttons__button">
+                        <button class="button-controls__default button-controls__measure--left-border button-controls__measure" id="fahrenheit">
+                            °F
+                        </button>
+                    </li>
+                    <li class="list-measure-buttons__button">
+                        <button class="button-controls__default button-controls__measure button-controls__measure--right-border button-controls__measure--active" id="celsius">
+                            °C
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-control">
+                <input class="search-control__place" id ="townSearch" placeholder="Search city or ZIP">
+                <button class="search-control__button" id="buttonSearch">
+                    Search
+                </button>
+            </div>
+        </section>
+        <div class="wrapper-info">
+            <div class="weather">
+                <section class="weather-today" id="weather-today">
+                    <div class="weather-today__day-info" id="dayInfo">
+                        <span class="weather-today__time" id="time"></span>
+                    </div>
+                    <div class="weather-today__info" id="weatherInfo"></div>
+                </section>
+                <section class="weather-future" id="weatherFuture"></section>
+            </div>
+            <section class="geolocation" id="geolocation">
+                <div class="maps" id="map"></div>
+            </section>    
+        </div>
+    </div>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
