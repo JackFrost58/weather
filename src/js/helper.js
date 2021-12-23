@@ -4,7 +4,7 @@ import {renderWeather, renderFutureWeather, renderCity, renderDay, removeElement
 
 const select = document.querySelector('select');
 const buttonsMeasure = document.querySelectorAll('.button-controls__measure');
-const fieldTime = document.getElementById('time');
+
 
 const listDaysLang = {
     'en': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -95,6 +95,7 @@ const getFutureDays = (lang) => {
     return arrayDays;
 }
 
+// eslint-disable-next-line consistent-return
 function getTimeOfYear() {
     const newDate = new Date();
     const months = {
@@ -109,6 +110,7 @@ function getTimeOfYear() {
     });
 
     
+    // eslint-disable-next-line no-restricted-syntax
     for (const key in months) {
         if (months[key].includes(currentMonth)){
             return key;
@@ -136,6 +138,7 @@ const setMeasure = (measure) => {
     const mainTemp = localStorage.getItem('celsiusTemp');
     const feelLikeTemp = localStorage.getItem('feelsLikeTemp');
     const fieldFeelLike = document.querySelectorAll('.list-weather__element');
+    
     buttonsMeasure.forEach((element) => {
         element.classList.remove('button-controls__measure--active');
     });
