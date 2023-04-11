@@ -10,26 +10,26 @@ const buttonRefresh = document.getElementById('button-refresh');
 const selectLang = document.querySelector('select');
 
 const switchMeasure = (() => {
-    buttonsMeasure.forEach((item) => {
-        item.addEventListener('click', (event) => {
-          setMeasure(event.currentTarget.id);
-        });
+  buttonsMeasure.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      setMeasure(event.currentTarget.id);
     });
+  });
 })();
 
 const refreshBG = (() => {
   buttonRefresh.addEventListener('click', async () => {
-    changeBG(localStorage.getItem('coors'))
+  changeBG(localStorage.getItem('coors'))
   })
 })();
 
 const searchCity = (() => {
   buttonSearch.addEventListener('click', () => {
-    if (townSearch.value) {
-      refreshData(townSearch.value);
-    } else {
-      showErrorMessage();
-    }
+  if (townSearch.value) {
+    refreshData(townSearch.value);
+  } else {
+    showErrorMessage();
+  }
    townSearch.value = '';
   })
 })
@@ -40,19 +40,19 @@ buttonTalk.addEventListener('click', () => {
 
 selectLang.addEventListener('change', () => {
   if(selectLang.value !== localStorage.getItem('defaultLang')) {
-    localStorage.setItem('defaultLang', selectLang.value);
-    removeElement();
-    refreshData(localStorage.getItem('city'));
+  localStorage.setItem('defaultLang', selectLang.value);
+  removeElement();
+  refreshData(localStorage.getItem('city'));
   }
 })
 
 townSearch.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
-    if (townSearch.value) {
-      refreshData(townSearch.value);
-    } else {
-      showErrorMessage();
-    }
+  if (townSearch.value) {
+    refreshData(townSearch.value);
+  } else {
+    showErrorMessage();
+  }
    townSearch.value = '';
   }
 })
