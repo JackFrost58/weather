@@ -21,11 +21,11 @@
   100% { transform: scale(1,1)    translateY(0); }
 }
 
-@keyframes microBack {
-  0% { background-image: url(../assets/icons/Micro.svg); }
-  50% { background-image: url(../assets/icons/Micro-active.svg);  }
-  100% { background-image: url(../assets/icons/Micro.svg)  }
-}
+// @keyframes microBack {
+//   0% { background-image: url(../assets/micro.svg); }
+//   50% { background-image: url(../assets/micro-active.svg);  }
+//   100% { background-image: url(../assets/micro.svg)  }
+// }
 
 %left-border-radius {
   border-top-left-radius: 5px;
@@ -446,7 +446,7 @@ body {
   float: right;
   border: 1px solid transparent;
   background-color: transparent;
-  background-image: url(../assets/icons/close.png);
+  // background-image: url(../assets/close.png);
   background-repeat: no-repeat;
 }
 
@@ -462,7 +462,7 @@ body {
   height: 44px;
   background-color: rgba(76, 82, 85, 0.4);
   border: 1px solid transparent;
-  background-image: url(../assets/icons/Micro.svg);
+  // background-image: url(../assets/micro.svg);
   background-position: center;
   background-repeat: no-repeat;
 
