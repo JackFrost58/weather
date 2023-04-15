@@ -65,7 +65,13 @@ function renderCity(newCity) {
 }
 
 function renderWeather(currently, lang) {
-  const {apparentTemperature, temperature, icon, summary, windSpeed, humidity} = currently;
+  // const {apparentTemperature, temperature, icon, windSpeed, humidity} = currently;
+  let summary = 'Rain'
+  let apparentTemperature = '20';
+  let temperature = '21';
+  let windSpeed = 20;
+  let humidity = 20;
+  let icon = 'rain';
   let arrayWeather;
   if (lang === 'en') {
     arrayWeather = [summary, `Feels like: ${Math.round(apparentTemperature)}°`, `Wind: ${windSpeed} m/s`, `Humidity: ${humidity * percentNumber}%`];

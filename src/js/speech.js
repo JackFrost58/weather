@@ -4,7 +4,6 @@ const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 
 function speechFunc(buttonTalk) {
   buttonTalk.disabled = true;
-  buttonTalk.style.backgroundImage = `url(./img/Micro-active.svg)`
   const recognition = new SpeechRecognition();
   
   recognition.interimResults = true;
@@ -23,7 +22,7 @@ function speechFunc(buttonTalk) {
   recognition.onspeechend = async function() {
     recognition.stop();
     buttonTalk.disabled = false;
-    buttonTalk.style.backgroundImage = `url(./img/Micro.svg)`;
+    buttonTalk.style.backgroundImage = `url(./img/micro.svg)`;
     if (document.getElementById('townSearch').value !== '') {
       refreshData(document.getElementById('townSearch').value);
     }

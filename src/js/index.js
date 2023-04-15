@@ -14,13 +14,13 @@ async function init() {
   const { loc } = await getUserLocation();
   const { currently, daily, timezone } = await getWeather(loc, lang);
   const { results } = await getCountry(loc, lang);
-  const { summary } = currently;
+  // const { summary } = currently;
   const { city, country } = results[0].components;
   const newCity = `${city}, ${country}`
   
   localStorage.setItem('city', city);
   localStorage.setItem('country', country);
-  localStorage.setItem('weather', summary);
+  // localStorage.setItem('weather', summary);
   localStorage.setItem('coors', loc);
   localStorage.setItem('timezone', timezone);
   
@@ -42,11 +42,11 @@ let currentTime = setTimeout(function getCurrentTime() {
     hour: 'numeric',
     minute: 'numeric',
   }
-  const date = dateData.toLocaleDateString('en', options);
+  // const date = dateData.toLocaleDateString('en', options);
   
-  const time = date.split(',')
+  // const time = date.split(',')
 
-  fieldTime.innerHTML = time[1];
+  fieldTime.innerHTML = '12:00';
   currentTime = setTimeout(getCurrentTime, 6000);
 }, 1000);
 
