@@ -1,0 +1,68 @@
+@import 'vars';
+@import 'mixins';
+
+:host {
+  @include flex(column);
+  @include flex-position(space-between);
+  background-color: $secondary;
+  width: 16rem;
+  height: 100%;
+
+  .logo-container {
+    @include flex;
+    @include flex-center;
+    margin-top: $double-offset;
+
+    &-icon {
+      @include block-size(4rem, 4rem);
+      font-size: 4rem;
+      color: $secondary-text;
+    }
+
+    &-title {
+      font-size: $middle-font;
+      font-weight: bold;
+      color: $secondary-text;
+    }
+  }
+
+  .sidebar-button {
+    @include flex;
+    width: fit-content;
+    padding-left: $middle-offset;
+    margin: $offset 0;
+    font-size: $middle-font;
+    background-color: transparent;
+    color: $primary-text;
+    border: none;
+
+    &:hover {
+      color: $secondary-text;
+      cursor: pointer;
+    }
+
+    .icon {
+      margin: 0 $half-offset;
+    }
+  }
+
+  .controls-container {
+    @include flex(column);
+  }
+
+  .setting-container {
+    @include flex(column);
+
+    &-title {
+      margin-left: $half-offset;
+      font-size: $middle-font;
+      color: $primary-text;
+    }
+
+    &-button {
+      &:hover {
+        color: $dark-blue-text;
+      }
+    }
+  }
+}
