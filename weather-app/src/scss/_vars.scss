@@ -1,6 +1,19 @@
-$mainButtonColor: rgba(180, 184, 187, 0.4);
-$buttonColorLight: rgba(76, 82, 85, 0.4);
-$white: #fff;
-$colorHover: #6fb47e;
-$tablet: 1000px;
-$mobile: 380px;
+$primary: #1E3453;
+$secondary: #EEF2F3;
+$white: #ffffff;
+$black: #000000;
+
+$primary-text: #AEB3B6;
+$secondary-text: #3069FE;
+$dark-blue-text: #051532;
+
+$primary-gradient: 95.47% 71.89% at 93.07% 74.31%, rgba(30, 52, 83, 0.9) 0%, rgba(46, 51, 90, 0.9) 100%;
+
+$default-font: 1rem;
+$middle-font: $default-font * 1.3;
+$double-font: $default-font * 2;
+
+$half-offset: 0.5rem;
+$offset: $half-offset * 2;
+$middle-offset: $offset * 1.5;
+$double-offset: $offset * 2;
