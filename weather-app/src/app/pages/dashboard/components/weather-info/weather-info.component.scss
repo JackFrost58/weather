@@ -1,0 +1,91 @@
+@import 'vars';
+@import 'mixins';
+
+:host {
+  @include flex(column);
+  width: 56rem;
+  margin-top: $middle-font;
+
+  .header-container {
+    @include flex;
+    @include flex-position(space-between);
+    margin-bottom: $double-offset;
+  }
+
+  .text-container {
+    @include flex(column);
+    
+    &-short {
+      font-size: 1.6rem;
+      color: $dark-blue-text;
+      font-weight: bold;
+    }
+
+    &-full {
+      font-size: $default-font;
+      color: $primary-text;
+    }
+  }
+
+  .icon {
+    color: $primary-text;
+    transition: all .5s;
+  }
+
+  .icon-input {
+    padding: $half-offset;
+  }
+
+  .controls-container {
+    &-button {
+      @include block-size(3rem, 3rem);
+      margin: $half-offset;
+      border-radius: 1rem;
+      border: $default-border;
+      transition: all .5s;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $secondary-text;
+
+        .icon {
+          color: $secondary-text;
+        }
+      }
+    }
+  }
+
+  .search-form {
+    width: 25rem;
+    height: 100%;
+    ::ng-deep .mat-mdc-text-field-wrapper {
+      border-radius: 1rem;
+
+      .mat-mdc-form-field-focus-overlay {
+        background-color: transparent;
+      }
+  
+      .mdc-line-ripple {
+        display: none;
+      }
+    }
+
+    ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+      display: none;
+    }
+  }
+
+  ::ng-deep .mdc-text-field{
+    background-color: whitesmoke !important;
+  }
+  
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    padding: 0 0.4rem !important;
+  }
+
+  ::ng-deep {
+    .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+      color: $secondary-text !important;
+    }
+  }
+}

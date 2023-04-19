@@ -1,1 +1,56 @@
-<p>worl</p>
+<header class="header-container">
+  <div class="text-container">
+    <span class="text-container-short">Janyary 2023</span>
+    <span class="text-container-full">Thursday, Jan 4, 2023</span>
+  </div>
+  <mat-form-field class="search-form">
+    <mat-label>Search location here</mat-label>
+    <mat-icon matPrefix class="icon icon-input">search</mat-icon>
+    <input matInput type="text" placeholder="Orsha" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon class="icon">close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class="controls-container">
+    <button class="controls-container-button">
+      <mat-icon class="icon" fontSet="material-icons-outlined">notifications</mat-icon>
+    </button>
+    <button class="controls-container-button">
+      <mat-icon class="icon" fontSet="material-icons-outlined">person</mat-icon>
+    </button>
+  </div>
+</header>
+<section>
+  <div>
+    <span>Today overview</span>
+    <button>
+      More detail
+      <mat-icon fontSet="material-icons-outlined">chevron_right</mat-icon>
+    </button>
+  </div>
+  <ng-container *ngFor="let item of descriptionsConfig">
+    <div>
+      <fa-icon [icon]="item.icon"></fa-icon>
+      <div>
+        <span>{{item.name}}</span>
+        <span>{{item.value + item.unit}}</span>
+      </div>
+      <div>
+        <mat-icon>expand_{{item.dinamicState}}</mat-icon>
+        <span>{{item.dinamic + item.unit}}</span>
+      </div>
+    </div>
+  </ng-container>
+</section>
+<section>
+  <div>
+    <span>Average Weekly Temperature</span>
+    <button>
+      Orsha, Republic of Belarus
+      <mat-icon fontSet="material-icons-outlined">expand_more</mat-icon>
+    </button>
+  </div>
+  <div>
+
+  </div>
+</section>
