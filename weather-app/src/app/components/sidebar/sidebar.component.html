@@ -1,11 +1,11 @@
 <section class="logo-container">
-  <mat-icon class="logo-container-icon">routine</mat-icon>
+  <mat-icon class="logo-container-icon">beach_access</mat-icon>
   <span class="logo-container-title">Weather</span> 
 </section>
 <section class="controls-container">
   <ng-container *ngFor="let routerButton of routerButtons">
     <button class="sidebar-button">
-      <mat-icon class="icon">{{routerButton.icon}}</mat-icon>
+      <mat-icon class="icon" fontSet="material-icons-outlined">{{routerButton.icon}}</mat-icon>
       {{routerButton.title}}
     </button>
   </ng-container>
@@ -14,7 +14,7 @@
   <span class="setting-container-title">System</span>
   <ng-container *ngFor="let settingButton of settingButtons">
     <button class="sidebar-button setting-container-button">
-      <mat-icon class="icon">{{settingButton.icon}}</mat-icon>
+      <mat-icon class="icon" fontSet="material-icons-outlined">{{settingButton.icon}}</mat-icon>
       {{settingButton.title}}
     </button>
   </ng-container>

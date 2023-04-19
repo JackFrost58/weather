@@ -10,8 +10,9 @@
 
   .logo-container {
     @include flex;
-    @include flex-center;
+    @include flex-position(flex-start,center);
     margin-top: $double-offset;
+    margin-left: $half-offset;
 
     &-icon {
       @include block-size(4rem, 4rem);
