@@ -3,10 +3,14 @@
   <span class="logo-container-title">Weather</span> 
 </section>
 <section class="controls-container">
-  <ng-container *ngFor="let routerButton of routerButtons">
-    <button class="sidebar-button">
+  <ng-container *ngFor="let routerButton of pageConfig">
+    <button 
+      class="sidebar-button" 
+      (click)="activePage = routerButton.page" 
+      [routerLink]="routerButton.url" 
+    >
       <mat-icon class="icon" fontSet="material-icons-outlined">{{routerButton.icon}}</mat-icon>
-      {{routerButton.title}}
+      {{routerButton.page}}
     </button>
   </ng-container>
 </section>
