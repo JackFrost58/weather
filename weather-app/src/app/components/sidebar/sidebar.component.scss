@@ -4,9 +4,10 @@
 :host {
   @include flex(column);
   @include flex-position(space-between);
-  background-color: $secondary;
   width: 16rem;
   height: 100%;
+  background-color: $secondary;
+  margin-right: $double-offset;
 
   .logo-container {
     @include flex;
@@ -35,7 +36,8 @@
     font-size: $middle-font;
     background-color: transparent;
     color: $primary-text;
-    border: none;
+    border: $default-border;
+    transition: all .5s;
 
     &:hover {
       color: $secondary-text;
