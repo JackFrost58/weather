@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {routerButtonConfig, settingButtonConfig} from './constants/buttons-config.constant';
+import {routerButtonConfig, settingButtonConfig} from './entities/constants/buttons-config.constant';
 
 @Component({
   selector: 'sidebar',
