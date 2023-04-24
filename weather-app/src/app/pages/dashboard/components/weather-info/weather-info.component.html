@@ -20,37 +20,40 @@
     </button>
   </div>
 </header>
-<section>
-  <div>
-    <span>Today overview</span>
-    <button>
+<section class="weather-container">
+  <div class="title-container">
+    <span class="title-container-text">Today overview</span>
+    <button class="title-container-button">
       More detail
       <mat-icon fontSet="material-icons-outlined">chevron_right</mat-icon>
     </button>
   </div>
-  <ng-container *ngFor="let item of descriptionsConfig">
-    <div>
-      <fa-icon [icon]="item.icon"></fa-icon>
-      <div>
-        <span>{{item.name}}</span>
-        <span>{{item.value + item.unit}}</span>
+  <div class="weather-cards">
+    <ng-container *ngFor="let item of descriptionsConfig">
+      <div class="weather-card">
+        <div class="weather-card-container">
+          <fa-icon class="weather-card-icon" [icon]="item.icon"></fa-icon>
+          <div class="weather-card-info">
+            <span class="weather-card-info-name">{{item.name}}</span>
+            <span class="weather-card-info-value">{{item.value + ' ' + item.unit}}</span>
+          </div>
+        </div>
+        <div class="weather-card-dynamic">
+          <mat-icon class="weather-card-dynamic-icon" [ngClass]="{more: item.dinamicState === 'more'}">expand_{{item.dinamicState}}</mat-icon>
+          <span class="weather-card-dynamic-value">{{item.dinamic + item.unit}}</span>
+        </div>
+        
       </div>
-      <div>
-        <mat-icon>expand_{{item.dinamicState}}</mat-icon>
-        <span>{{item.dinamic + item.unit}}</span>
-      </div>
-    </div>
-  </ng-container>
+    </ng-container>
+  </div>
 </section>
-<section>
-  <div>
-    <span>Average Weekly Temperature</span>
-    <button>
+<section class="chart-container">
+  <div class="title-container">
+    <span class="title-container-text">Average Weekly Temperature</span>
+    <button class="title-container-button">
       Orsha, Republic of Belarus
       <mat-icon fontSet="material-icons-outlined">expand_more</mat-icon>
     </button>
   </div>
-  <div>
-
-  </div>
+  <temperature-chart></temperature-chart>
 </section>

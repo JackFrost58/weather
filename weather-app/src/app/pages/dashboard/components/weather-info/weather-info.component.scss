@@ -16,9 +16,10 @@
     @include flex(column);
     
     &-short {
+      margin-bottom: $half-offset;
       font-size: 1.6rem;
-      color: $dark-blue-text;
       font-weight: bold;
+      color: $dark-blue-text;
     }
 
     &-full {
@@ -86,6 +87,104 @@
   ::ng-deep {
     .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
       color: $secondary-text !important;
+    }
+  }
+
+  .weather-container, .chart-container {
+    @include flex(column);
+    width: 100%;
+    margin-bottom: $double-offset;
+  }
+
+  .title-container {
+    @include flex;
+    @include flex-position(space-between);
+    margin-bottom: $middle-offset;
+
+    &-text {
+      color: $dark-blue-text;
+      font-size: $middle-font;
+      font-weight: bold;
+    }
+
+    &-button {
+      @include flex;
+      @include flex-center;
+      background-color: transparent;
+      color: $secondary-text;
+      border: $default-border;
+      font-size: $middle-font;
+      cursor: pointer;
+    }
+  }
+
+  .weather-cards {
+    @include flex;
+    @include flex-position(space-between);
+    width: 100%;
+    flex-wrap: wrap;
+
+    .weather-card {
+      @include flex;
+      @include flex-position(space-between);
+      width: 20rem;
+      margin: $offset 0;
+      padding: $middle-offset;
+      background-color: whitesmoke;
+      border-radius: 1rem;
+      border: $default-border;
+      transition: all .5s;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $secondary-text
+      }
+
+      &-container {
+        @include flex;
+      }
+
+      &-icon {
+        @include flex;
+        @include flex-center;
+        margin-right: $double-offset;
+        font-size: 3rem;
+        color: $secondary-text;
+      }
+
+      &-info {
+        @include flex(column);
+        
+        &-name {
+          margin-bottom: $half-offset;
+          font-size: $middle-font;
+          color: $primary-text;
+        }
+
+        &-value {
+          font-size: $double-font;
+          font-weight: bold;
+          color: $dark-blue-text;
+        }
+      }
+
+      &-dynamic {
+        @include flex;
+        @include flex-center;
+
+        &-icon {
+          color: $warn;
+        }
+
+        .more {
+          color: $secondary-text;
+        }
+
+        &-value {
+          font-size: $middle-font;
+          color: $primary-text;
+        }
+      }
     }
   }
 }
