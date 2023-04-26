@@ -1,3 +1,59 @@
-<p>
-  detailed-weather works!
-</p>
+<section class="main-container">
+  <div class="user-container">
+    <div class="user-container-wrapper">
+      <span class="user-container-wrapper-name">Vladislav Zhgirov</span>
+      <span class="user-container-wrapper-location">Orsha, Belarus</span>
+    </div>
+    <span class="user-container-time">08:54 AM</span>
+  </div>
+  <div class="location-container">
+    <div class="location-container-wrapper">
+      <fa-icon class="location-container-wrapper-icon" [icon]="faCloud"></fa-icon>
+      <span class="location-container-wrapper-temperature">20° C</span>
+    </div>
+    <span class="location-container-description">Cloudy</span>
+  </div>
+</section>
+<mat-divider class="divider">
+</mat-divider>
+<section class="chance-container">
+  <span class="title">Chance of rain</span>
+  <div class="progress-container">
+    <ng-container *ngFor="let item of items">
+      <div class="progress-weather">
+        <span class="prefix">{{item.time}}</span>
+        <mat-progress-bar
+          mode="determinate"
+          color="#000000"
+          [value]="item.progress">
+        </mat-progress-bar>
+        <span class="sufix">{{item.progress}}%</span>
+      </div>
+    </ng-container>
+  </div> 
+</section>
+<section>
+  <div class="title-container">
+    <span class="title">Sunrise & Sunset</span>
+    <button class="title-container-button">
+      Orsha
+      <mat-icon fontSet="material-icons-outlined">expand_more</mat-icon>
+    </button>
+  </div>
+  <div class="sun-states-container">
+    <ng-container *ngFor="let dayState of dayStateConfig">
+      <div class="state-container">
+        <div class="state-container-wrapper">
+          <mat-icon class="state-container-wrapper-icon" [fontIcon]="dayState.icon"></mat-icon>
+          <div class="state-text-container">
+            <span class="state-text-container-title">{{dayState.title}}</span>
+            <span class="state-text-container-time">4:20 AM</span>
+          </div> 
+        </div>
+        <span class="state-container-time-divide">
+          4 hours ago
+        </span>
+      </div>
+    </ng-container>
+  </div>
+</section>

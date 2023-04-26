@@ -1,0 +1,171 @@
+@import 'vars';
+@import 'mixins';
+
+:host {
+  @include flex(column);
+  @include flex-position(flex-start);
+  height: 100%;
+  padding: 1.5 * $double-offset $double-offset $double-offset;
+  background: linear-gradient(121.66deg, #43556F 7.04%, #173050 93.66%);
+  color: $white;
+
+  .main-container {
+    @include flex(column);
+
+    .user-container {
+      @include flex;
+      @include flex-position(space-between, center);
+      margin-bottom: $double-offset;
+
+      &-wrapper {
+        @include flex(column);
+
+        &-name {
+          font-size: $double-font;
+          margin-bottom: $half-offset;
+          margin-right: $offset;
+        }
+
+        &-location {
+          font-size: $middle-font;
+          color: $primary-text;
+        }
+      }
+
+      &-time {
+        font-size: $double-font;
+      }
+    }
+
+    .location-container {
+      @include flex;
+      @include flex-position(space-between);
+
+      &-wrapper {
+        @include flex(column);
+
+        &-icon {
+          font-size: $double-font;
+          color: $primary-text;
+        }
+
+        &-temperature {
+          font-size: 2 * $double-font;
+        }
+      }
+
+      &-description {
+        @include flex;
+        @include flex-position(flex-start, flex-end);
+        font-size: $double-font;
+      }
+    }
+  }
+
+  .divider {
+    border-top-width: 3px;
+    background-color: $light-gray;
+    border-radius: $default-border-radius;
+    margin: $double-offset 0;
+  }
+
+  .title {
+    font-size: $double-font;
+    margin-bottom: $half-offset;
+  }
+
+  .progress-weather {
+    @include flex;
+    @include flex-center;
+    margin: $offset 0;
+
+    .prefix {
+      width: 4rem;
+      margin-right: $half-offset;
+      white-space: nowrap;
+    }
+
+    .sufix {
+      margin-left: $offset;
+    }
+
+    ::ng-deep .mdc-linear-progress__bar-inner {
+      border-color: $light-blue;
+      border-top-width: 2.5rem;
+      border-radius: 3 * $default-border-radius;
+    }
+
+    ::ng-deep .mdc-linear-progress__buffer-bar {
+      background-color: $light-gray;
+    }
+
+    ::ng-deep mat-progress-bar {
+      height: 2.5rem;
+      border-radius: 3 * $default-border-radius;
+    }
+  }
+
+  .title-container {
+    @include flex;
+    @include flex-position(space-between);
+    margin: $middle-offset 0 $offset;
+
+    &-button {
+      @include flex;
+      @include flex-center;
+      background-color: transparent;
+      color: $white;
+      border: $default-border;
+      font-size: $middle-font;
+      cursor: pointer;
+
+      .material-icons-outlined {
+        margin-left: $middle-offset;
+      }
+    }
+  }
+
+  .sun-states-container {
+    @include flex(column);
+
+    .state-container {
+      @include flex;
+      @include flex-position(space-between, center);
+      background-color: rgb(166 173 181 / 22%);
+      border-radius: $default-border-radius;
+      margin: $half-offset 0;
+      padding: $offset;
+      border: $default-border;
+      transition: all .5s;
+
+      &:hover {
+        border-color: $secondary-text;
+        cursor: pointer;
+      }
+
+      .state-container-wrapper {
+        @include flex;
+        @include flex-position(flex-start, center);
+
+        &-icon {
+          @include icon(3rem);
+          margin-right: $offset;
+        }
+      }
+
+      .state-text-container {
+        @include flex(column);
+
+        &-time {
+          font-size: $double-font;
+        }
+
+        &-title {
+          font-size: $middle-font;
+          color: $primary-text;
+          margin-bottom: $half-offset;
+        }
+      }
+    }
+  }
+}

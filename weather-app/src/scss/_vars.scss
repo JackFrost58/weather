@@ -3,12 +3,12 @@ $secondary: #EEF2F3;
 $white: #ffffff;
 $black: #000000;
 $warn: #AF4041;
+$light-gray: #828f9fbe;
+$light-blue: #8CB2FB;
 
 $primary-text: #AEB3B6;
 $secondary-text: #3069FE;
 $dark-blue-text: #102D57;
-
-$primary-gradient: 95.47% 71.89% at 93.07% 74.31%, rgba(30, 52, 83, 0.9) 0%, rgba(46, 51, 90, 0.9) 100%;
 
 $default-font: 1rem;
 $middle-font: $default-font * 1.3;
@@ -20,3 +20,5 @@ $middle-offset: $offset * 1.5;
 $double-offset: $offset * 2;
 
 $default-border: 1px solid transparent;
+
+$default-border-radius: 0.5rem;

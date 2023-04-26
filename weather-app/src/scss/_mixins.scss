@@ -17,3 +17,9 @@
   width: $width;
   height: $height;
 }
+
+@mixin icon($size, $font: $size) {
+  width: $size;
+  height: $size;
+  font-size: $font;
+}
