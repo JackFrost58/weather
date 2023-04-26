@@ -5,7 +5,8 @@
   @include flex(column);
   width: 56rem;
   margin-top: $middle-font;
-
+  margin-right: $double-offset;
+  
   .header-container {
     @include flex;
     @include flex-position(space-between);
