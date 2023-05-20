@@ -10,6 +10,7 @@ import {WeatherApiService} from 'src/app/shared/weather-api/weather.api.service'
 export class WeatherInfoComponent implements OnInit {
   @Input() data: any;
 
+  public currentDate = new Date();
   public value = '';
   public descriptionsConfig = [
     {
@@ -46,7 +47,11 @@ export class WeatherInfoComponent implements OnInit {
     }
   ];
 
-  constructor(private weatherApiService: WeatherApiService) { }
+  constructor(private weatherApiService: WeatherApiService) {
+    setInterval(()=> {
+      this.currentDate = new Date();
+    }, 5000)
+  }
 
   ngOnInit(): void {
     console.log(this.data)
@@ -59,9 +64,5 @@ export class WeatherInfoComponent implements OnInit {
 
     //   this.data = {...data}
     // });
-  }
-
-  public getCurrentDate(): Date {
-    return new Date();
   }
 }
