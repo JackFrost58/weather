@@ -4,11 +4,11 @@
       <span class="user-container-wrapper-name">Vladislav Zhgirov</span>
       <span class="user-container-wrapper-location">Orsha, Belarus</span>
     </div>
-    <span class="user-container-time">08:54 AM</span>
+    <span class="user-container-time">{{time | date: 'h:mm a'}}</span>
   </div>
   <div class="location-container">
     <div class="location-container-wrapper">
-      <fa-icon class="location-container-wrapper-icon" [icon]="faCloud"></fa-icon>
+      <i class="wi wi-day-cloudy location-container-wrapper-icon"></i>
       <span class="location-container-wrapper-temperature">20° C</span>
     </div>
     <span class="location-container-description">Cloudy</span>
@@ -44,7 +44,7 @@
     <ng-container *ngFor="let dayState of dayStateConfig">
       <div class="state-container">
         <div class="state-container-wrapper">
-          <mat-icon class="state-container-wrapper-icon" [fontIcon]="dayState.icon"></mat-icon>
+          <i class="wi state-container-wrapper-icon" [ngClass]="dayState.icon"></i>
           <div class="state-text-container">
             <span class="state-text-container-title">{{dayState.title}}</span>
             <span class="state-text-container-time">4:20 AM</span>

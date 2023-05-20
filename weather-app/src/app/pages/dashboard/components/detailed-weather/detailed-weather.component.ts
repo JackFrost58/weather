@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {faSun} from '@fortawesome/free-solid-svg-icons';
-import {faCloud} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'detailed-weather',
@@ -8,17 +6,19 @@ import {faCloud} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./detailed-weather.component.scss']
 })
 export class DetailedWeatherComponent implements OnInit {
-  public faCloud = faCloud;
+  public time = new Date();
+
   public dayStateConfig = [
     {
       title: 'Sunrise',
-      icon: 'cloudy'
+      icon: 'wi-sunrise'
     },
     {
       title: 'Sunset',
-      icon: 'sunny_snowing'
+      icon: 'wi-sunset'
     }
-  ]
+  ];
+
   public items = [
     {
       time: '7 PM',
@@ -36,10 +36,13 @@ export class DetailedWeatherComponent implements OnInit {
       time: '10 PM',
       progress: 72
     }
-  ]
-  constructor() { }
+  ];
 
-  ngOnInit() {
+  constructor() {
+    setInterval(() => {
+      this.time = new Date();
+    })
   }
 
+  ngOnInit(): void {}
 }
