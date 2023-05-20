@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {weatherDatas} from '@shared/mocks/weather.mock';
 import {WeatherApiService} from '@shared/weather-api/weather.api.service';
+import {timer, switchMap} from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',

@@ -1,0 +1,13 @@
+@import 'vars';
+@import 'mixins';
+
+:host {
+  @include flex;
+  flex-grow: 1;
+  
+  ::ng-deep {
+    weather-info {
+      flex-grow: 1;
+    }
+  }
+}
