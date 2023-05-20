@@ -19,6 +19,18 @@ const routes: Routes = [
       (m) => m.MapModule
     )
   },
+  {
+    path: 'health', 
+    loadChildren: () => import('./pages/health/health.module').then(
+      (m) => m.HealthModule
+    )
+  },
+  {
+    path: 'wallet', 
+    loadChildren: () => import('./pages/wallet/wallet.module').then(
+      (m) => m.WalletModule
+    )
+  },
 ];
 
 @NgModule({
