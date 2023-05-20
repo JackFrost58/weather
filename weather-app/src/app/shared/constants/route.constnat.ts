@@ -15,14 +15,14 @@ export const PAGE_CONFIG: NavigationItem[] = [
   },
   {
     id: 2,
-    page: 'Saved Location',
-    url: './location',
-    icon: 'local_library'
+    page: 'Health',
+    url: './health',
+    icon: 'medical_information'
   },
   {
     id: 3,
-    page: 'Calendar',
-    url: './calendar',
-    icon: 'calendar_month'
+    page: 'Wallet',
+    url: './wallet',
+    icon: 'credit_card'
   }
 ];
