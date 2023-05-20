@@ -1,7 +1,7 @@
 <header class="header-container">
   <div class="text-container">
-    <span class="text-container-short">Janyary 2023</span>
-    <span class="text-container-full">Thursday, Jan 4, 2023</span>
+    <span class="text-container-short">{{getCurrentDate() | date: 'MMMM y'}}</span>
+    <span class="text-container-full">{{getCurrentDate() | date: 'EEEE, MMM d, y'}}</span>
   </div>
   <mat-form-field class="search-form">
     <mat-label>Search location here</mat-label>
@@ -20,36 +20,38 @@
     </button>
   </div>
 </header>
-<section class="weather-container">
-  <div class="title-container">
-    <span class="title-container-text">Today overview</span>
-  </div>
-  <div class="weather-cards">
-    <ng-container *ngFor="let item of descriptionsConfig">
-      <div class="weather-card">
-        <div class="weather-card-container">
-          <fa-icon class="weather-card-icon" [icon]="item.icon"></fa-icon>
-          <div class="weather-card-info">
-            <span class="weather-card-info-name">{{item.name}}</span>
-            <span class="weather-card-info-value">{{item.value + ' ' + item.unit}}</span>
+<section class="content">
+  <article class="chart-container">
+    <div class="title-container">
+      <span class="title-container-text">Average Weekly Temperature</span>
+      <button class="title-container-button">
+        Orsha, Republic of Belarus
+        <mat-icon fontSet="material-icons-outlined">expand_more</mat-icon>
+      </button>
+    </div>
+    <!-- <temperature-chart></temperature-chart> -->
+  </article>
+  <article class="weather-container">
+    <div class="title-container">
+      <span class="title-container-text">Today overview</span>
+    </div>
+    <div class="weather-cards">
+      <ng-container *ngFor="let item of descriptionsConfig">
+        <div class="weather-card">
+          <div class="weather-card-container">
+            <i class="wi" [ngClass]="item.icon"></i>
+            <div class="weather-card-info">
+              <span class="weather-card-info-name">{{item.name}}</span>
+              <span class="weather-card-info-value">{{item.value + ' ' + item.unit}}</span>
+            </div>
           </div>
+          <div class="weather-card-dynamic">
+            <mat-icon class="weather-card-dynamic-icon" [ngClass]="{more: item.dinamicState === 'more'}">expand_{{item.dinamicState}}</mat-icon>
+            <span class="weather-card-dynamic-value">{{item.dinamic + item.unit}}</span>
+          </div>
+          
         </div>
-        <div class="weather-card-dynamic">
-          <mat-icon class="weather-card-dynamic-icon" [ngClass]="{more: item.dinamicState === 'more'}">expand_{{item.dinamicState}}</mat-icon>
-          <span class="weather-card-dynamic-value">{{item.dinamic + item.unit}}</span>
-        </div>
-        
-      </div>
-    </ng-container>
-  </div>
-</section>
-<section class="chart-container">
-  <div class="title-container">
-    <span class="title-container-text">Average Weekly Temperature</span>
-    <button class="title-container-button">
-      Orsha, Republic of Belarus
-      <mat-icon fontSet="material-icons-outlined">expand_more</mat-icon>
-    </button>
-  </div>
-  <temperature-chart></temperature-chart>
+      </ng-container>
+    </div>
+  </article>
 </section>

@@ -1,8 +1,10 @@
 @import 'vars';
 @import 'mixins';
+@import 'weather-icons';
 
 :host {
   @include flex(column);
+  // @include flex-position(space-between);
   width: 56rem;
   margin-top: $middle-font;
   margin-right: $double-offset;
@@ -10,7 +12,7 @@
   .header-container {
     @include flex;
     @include flex-position(space-between);
-    margin-bottom: $double-offset;
+    margin-bottom: $middle-offset;
   }
 
   .text-container {
@@ -27,6 +29,10 @@
       font-size: $default-font;
       color: $primary-text;
     }
+  }
+
+  .content {
+    @include flex;
   }
 
   .icon {
@@ -59,7 +65,7 @@
 
   .search-form {
     width: 25rem;
-    height: 100%;
+    height: 3.2rem;
     ::ng-deep .mat-mdc-text-field-wrapper {
       border-radius: 1rem;
 
@@ -128,8 +134,8 @@
     .weather-card {
       @include flex;
       @include flex-position(space-between);
-      width: 20rem;
-      margin: $offset 0;
+      width: 15rem;
+      margin: $half-offset 0;
       padding: $middle-offset;
       background-color: whitesmoke;
       border-radius: 1rem;
@@ -155,15 +161,17 @@
 
       &-info {
         @include flex(column);
+        margin-right: $half-offset;
         
         &-name {
           margin-bottom: $half-offset;
           font-size: $middle-font;
           color: $primary-text;
+          white-space: nowrap;
         }
 
         &-value {
-          font-size: $double-font;
+          font-size: $middle-font;
           font-weight: bold;
           color: $dark-blue-text;
         }
@@ -182,10 +190,17 @@
         }
 
         &-value {
-          font-size: $middle-font;
           color: $primary-text;
         }
       }
     }
+  }
+
+  .wi {
+    @include flex;
+    @include flex-center;
+    margin-right: $offset;
+    font-size: 2.5rem;
+    color: $secondary-text;
   }
 }

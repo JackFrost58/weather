@@ -18,7 +18,7 @@ export class WeatherInfoComponent implements OnInit {
       dinamic: 2,
       dinamicState: 'more',
       unit: 'km/h',
-      icon: faWind
+      icon: 'wi-strong-wind'
     },
     {
       name: 'Rain Chanse',
@@ -26,7 +26,7 @@ export class WeatherInfoComponent implements OnInit {
       dinamic: 10,
       dinamicState: 'less',
       unit: '%',
-      icon: faCloudRain
+      icon: 'wi-rain'
     },
     {
       name: 'Pressure',
@@ -34,7 +34,7 @@ export class WeatherInfoComponent implements OnInit {
       dinamic: 32,
       dinamicState: 'less',
       unit: 'hpa',
-      icon: faWater
+      icon: 'wi-barometer'
     },
     {
       name: 'Uv Index',
@@ -42,23 +42,26 @@ export class WeatherInfoComponent implements OnInit {
       dinamic: 0.3,
       dinamicState: 'more',
       unit: '',
-      icon: faSun
+      icon: 'wi-day-sunny'
     }
   ];
 
   constructor(private weatherApiService: WeatherApiService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log(this.data)
     this.showWeather()
   }
 
-  showWeather() {
+  public showWeather() {
     // this.weatherApiService.getWeather().subscribe((data: any) => {
     //   console.log(this.data)
 
     //   this.data = {...data}
     // });
+  }
 
+  public getCurrentDate(): Date {
+    return new Date();
   }
 }
