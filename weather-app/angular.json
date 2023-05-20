@@ -35,7 +35,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/scss/"
+                "src/scss/",
+                "node_modules/weathericons/sass/"
               ]
             },
             "scripts": []
@@ -104,11 +105,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "0b9f6564-2b2c-43b2-be7b-9ce4e37a524e"
+    "analytics": "0b9f6564-2b2c-43b2-be7b-9ce4e37a524e",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
