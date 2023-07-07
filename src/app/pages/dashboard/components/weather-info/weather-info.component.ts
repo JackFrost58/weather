@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {faCloudRain, faSun, faWater, faWind} from '@fortawesome/free-solid-svg-icons';
 import {WeatherApiService} from 'src/app/shared/weather-api/weather.api.service';
 
 @Component({
