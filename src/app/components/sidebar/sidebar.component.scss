@@ -4,7 +4,7 @@
 :host {
   @include flex(column);
   @include flex-position(space-between);
-  width: 16rem;
+  width: 18rem;
   height: 100%;
   background-color: $secondary;
   margin-right: $double-offset;
