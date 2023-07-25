@@ -5,6 +5,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {MaterialModule} from '@shared/material.module';
 import {TemperatureChartModule} from '../temperature-chart/temperature-chart.module';
 import {WeatherInfoComponent} from './weather-info.component';
+import {HeaderInfoModule} from '@components/header-info/header-info.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {WeatherInfoComponent} from './weather-info.component';
     MaterialModule,
     FontAwesomeModule,
     FormsModule,
-    TemperatureChartModule
+    TemperatureChartModule,
+    HeaderInfoModule
   ],
   declarations: [WeatherInfoComponent],
   exports: [WeatherInfoComponent]
