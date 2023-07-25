@@ -27,6 +27,7 @@
       "@interfaces/*": ["src/app/shared/interfaces/*"],
       "@services/*": ["src/app/shared/services/*"],
       "@shared/*": ["src/app/shared/*"],
+      "@components/*": ["src/app/shared/components/*"],
     },
     "useDefineForClassFields": false,
     "lib": [
