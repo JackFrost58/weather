@@ -1,0 +1,27 @@
+<header class="header-container">
+  <div >
+    <div class="text-container" [ngSwitch]="currentLanguage">
+      <span *ngSwitchCase="'ru'" class="text-container-short">{{currentDateRus}}</span>
+      <span *ngSwitchDefault class="text-container-short">{{currentDate | date: 'MMMM y': undefined: this.currentLanguage}}</span>
+
+      <span class="text-container-full">{{currentDate | date: 'EEEE, MMM d, y': undefined: this.currentLanguage}}</span>
+    </div>
+  </div>
+
+  <ng-container *ngIf="withSearch">
+    <mat-form-field class="search-form">
+      <mat-label>{{langField.searchField}}</mat-label>
+      <mat-icon matPrefix class="icon icon-input">search</mat-icon>
+      <input matInput type="text" placeholder="{{langField.defaultCity}}" [(ngModel)]="searchValue">
+      <button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear" (click)="searchValue=''" class="search-form-clear">
+        <mat-icon class="icon">close</mat-icon>
+      </button>
+    </mat-form-field>
+  </ng-container>
+  
+  <div class="controls-container">
+    <button class="controls-container-button">
+      <mat-icon class="icon" fontSet="material-icons-outlined">person</mat-icon>
+    </button>
+  </div>
+</header>
