@@ -1,0 +1,10 @@
+@import 'vars';
+@import 'mixins';
+@import 'weather-icons';
+
+:host {
+  @include flex;
+  flex: 1;
+  padding-top: $middle-font;
+  padding-right: $double-offset;
+}
