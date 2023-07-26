@@ -20,4 +20,8 @@ export class SidebarComponent implements OnInit{
   ngOnInit(): void {
     this.activePage = this.pageConfig[0].page;
   }
+
+  public isActivePage(page: string): boolean {
+    return this.activePage === page;
+  }
 }

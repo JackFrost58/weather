@@ -49,6 +49,10 @@
     }
   }
 
+  .active {
+    color: $secondary-text;
+  }
+
   .controls-container {
     @include flex(column);
   }

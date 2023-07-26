@@ -8,6 +8,7 @@
       class="sidebar-button" 
       (click)="activePage = routerButton.page" 
       [routerLink]="routerButton.url" 
+      [ngClass]="{'active': isActivePage(routerButton.page)}"
     >
       <mat-icon class="icon" fontSet="material-icons-outlined">{{routerButton.icon}}</mat-icon>
       {{routerButton.page}}
