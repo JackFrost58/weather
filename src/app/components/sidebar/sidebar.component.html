@@ -16,11 +16,20 @@
   </ng-container>
 </section>
 <section class="setting-container">
-  <span class="setting-container-title">System</span>
-  <ng-container *ngFor="let settingButton of settingButtons">
+  <button class="sidebar-button setting-container-button">
+    <mat-icon class="icon" fontSet="material-icons-outlined">settings</mat-icon>
+    {{languageConfig.system.settings}}
+  </button>
+  <ng-container *ngIf="true; else login">
     <button class="sidebar-button setting-container-button">
-      <mat-icon class="icon" fontSet="material-icons-outlined">{{settingButton.icon}}</mat-icon>
-      {{settingButton.title}}
+      <mat-icon class="icon" fontSet="material-icons-outlined" (click)="logOut()">logout</mat-icon>
+      {{languageConfig.system.logout}}
     </button>
   </ng-container>
+  <ng-template #login>
+    <button class="sidebar-button setting-container-button">
+      <mat-icon class="icon" fontSet="material-icons-outlined" (click)="logIn()">login</mat-icon>
+      {{languageConfig.system.login}}
+    </button>
+  </ng-template>
 </section>

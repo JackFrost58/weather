@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
+import {SettingsModalModule} from '../settings-modal/settings-modal.module';
 import {SidebarComponent} from './sidebar.component';
 
 @NgModule({
@@ -10,7 +11,8 @@ import {SidebarComponent} from './sidebar.component';
     CommonModule,
     MatIconModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    SettingsModalModule
   ],
   declarations: [SidebarComponent],
   exports: [SidebarComponent]
