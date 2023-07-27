@@ -20,8 +20,11 @@
   </ng-container>
   
   <div class="controls-container">
-    <button class="controls-container-button">
-      <mat-icon class="icon" fontSet="material-icons-outlined">person</mat-icon>
+    <button class="controls-container-button" [matTooltip]="'Account'">
+      <mat-icon 
+        class="icon" 
+        fontSet="material-icons-outlined" 
+      >person</mat-icon>
     </button>
   </div>
 </header>

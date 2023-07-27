@@ -43,9 +43,8 @@
     &-button {
       @include flex;
       @include flex-center;
-      @include square-size(3rem);
+      @include square-size($btn-icon-size);
 
-      margin: $half-offset;
       padding: 0;
       border-radius: $double-border-radius;
       border: $default-border;
@@ -63,7 +62,7 @@
   }
 
   .search-form {
-    @include block-size(35rem, 3.2rem);
+    @include block-size(35rem, $btn-icon-size);
 
     &-clear {
       &:hover {

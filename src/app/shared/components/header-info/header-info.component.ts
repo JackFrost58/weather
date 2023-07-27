@@ -48,8 +48,5 @@ export class HeaderInfoComponent implements OnInit, OnChanges {
     }    
   }
 
-  ngOnInit(): void {
-    console.log(this.currentLanguage)
-  }
-
+  ngOnInit(): void {}
 }
