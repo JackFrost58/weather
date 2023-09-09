@@ -5,9 +5,12 @@ $black: #000000;
 $warn: #AF4041;
 $light-gray: #828f9fbe;
 $light-blue: #8CB2FB;
+$red: #f44336;
+
 
 $primary-text: #AEB3B6;
-$secondary-text: #3069FE;
+$primary-blue: #3069FE;
+$primary-blue-light: #306afe60;
 $dark-blue-text: #102D57;
 
 $default-font: 1rem;
@@ -25,3 +28,5 @@ $default-border-radius: 0.5rem;
 $double-border-radius: $default-border-radius * 2;
 
 $default-transition: all .5s;
+
+$btn-icon-size: 3.2rem;

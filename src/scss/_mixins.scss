@@ -51,3 +51,49 @@
 @mixin cubic() {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+@mixin shadow($color) {
+  -webkit-box-shadow: 0 5px 10px 2px $color;
+  -moz-box-shadow: 0 5px 10px 2px $color;
+  box-shadow: 0 5px 10px 2px $color;
+}
+
+@mixin slide() {
+  ::ng-deep {
+    .mdc-switch__shadow {
+      background: $primary-blue;
+    }
+
+    .mdc-switch__track::after {
+      background: #e0e0e0 !important;
+    }
+
+    .mdc-switch__icon {
+      transform: scale(0.8);
+  
+      &--off > path {
+        display: none;
+      }
+      
+      &--on > path {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin slide-with-icons($icon-on, $icon-off) {
+  ::ng-deep {
+    .mdc-switch__icon {
+      transform: scale(0.8);
+  
+      &--off > path {
+        d: path($icon-off);
+      }
+      
+      &--on > path {
+        d: path($icon-on);
+      }
+    }
+  }
+}
