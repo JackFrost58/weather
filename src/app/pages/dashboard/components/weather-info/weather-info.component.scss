@@ -34,7 +34,7 @@
       @include flex;
       @include flex-center;
       background-color: transparent;
-      color: $secondary-text;
+      color: $primary-blue;
       border: $default-border;
       font-size: $middle-font;
       cursor: pointer;
@@ -60,7 +60,7 @@
       cursor: pointer;
 
       &:hover {
-        border-color: $secondary-text
+        border-color: $primary-blue
       }
 
       &-container {
@@ -72,7 +72,7 @@
         @include flex-center;
         margin-right: $double-offset;
         font-size: 3rem;
-        color: $secondary-text;
+        color: $primary-blue;
       }
 
       &-info {
@@ -102,7 +102,7 @@
         }
 
         .more {
-          color: $secondary-text;
+          color: $primary-blue;
         }
 
         &-value {
@@ -117,6 +117,6 @@
     @include flex-center;
     margin-right: $offset;
     font-size: 2.5rem;
-    color: $secondary-text;
+    color: $primary-blue;
   }
 }

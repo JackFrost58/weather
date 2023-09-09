@@ -58,10 +58,10 @@ export class WeatherInfoComponent implements OnInit {
   }
 
   public showWeather() {
-    // this.weatherApiService.getWeather().subscribe((data: any) => {
-    //   console.log(this.data)
+    this.weatherApiService.getWeather().subscribe((data: any) => {
+      console.log(this.data)
 
-    //   this.data = {...data}
-    // });
+      this.data = {...data}
+    });
   }
 }
