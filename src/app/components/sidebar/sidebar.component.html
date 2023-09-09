@@ -16,7 +16,7 @@
   </ng-container>
 </section>
 <section class="setting-container">
-  <button class="sidebar-button setting-container-button">
+  <button class="sidebar-button setting-container-button" (click)="openModalSettings()">
     <mat-icon class="icon" fontSet="material-icons-outlined">settings</mat-icon>
     {{languageConfig.system.settings}}
   </button>

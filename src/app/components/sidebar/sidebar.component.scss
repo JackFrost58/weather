@@ -18,13 +18,13 @@
     &-icon {
       @include block-size(4rem, 4rem);
       font-size: 4rem;
-      color: $secondary-text;
+      color: $primary-blue;
     }
 
     &-title {
       font-size: $middle-font;
       font-weight: bold;
-      color: $secondary-text;
+      color: $primary-blue;
     }
   }
 
@@ -40,7 +40,7 @@
     transition: all .5s;
 
     &:hover {
-      color: $secondary-text;
+      color: $primary-blue;
       cursor: pointer;
     }
 
@@ -50,7 +50,7 @@
   }
 
   .active {
-    color: $secondary-text;
+    color: $primary-blue;
   }
 
   .controls-container {

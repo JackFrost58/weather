@@ -48,9 +48,11 @@ export class SidebarComponent implements OnInit, OnChanges {
     return this.activePage === page;
   }
 
-  public openDialog(): void {
+  public openModalSettings(): void {
     const dialogRef = this.dialog.open(SettingsModalComponent, {
-      data: {},
+      data: {
+        ...this.languageConfig
+      },
     });
 
     dialogRef.afterClosed().subscribe(result => {
