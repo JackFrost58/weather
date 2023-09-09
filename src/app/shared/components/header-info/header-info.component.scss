@@ -34,7 +34,7 @@
 
   .icon-input {
     padding: $half-offset;
-    color: $secondary-text;
+    color: $primary-blue;
   }
 
   .controls-container {
@@ -52,10 +52,10 @@
       cursor: pointer;
 
       &:hover {
-        border: 1px solid $secondary-text;
+        border: 1px solid $primary-blue;
 
         .icon {
-          color: $secondary-text;
+          color: $primary-blue;
         }
       }
     }
@@ -67,7 +67,7 @@
     &-clear {
       &:hover {
         .icon {
-          color: $secondary-text;
+          color: $primary-blue;
         }
       }
       
@@ -107,7 +107,7 @@
     }
 
     .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-      color: $secondary-text !important;
+      color: $primary-blue !important;
     }
   }
 }
