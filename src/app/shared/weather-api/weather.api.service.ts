@@ -6,8 +6,6 @@ import {Subject, merge, timer} from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherApiService {
-  // public weather$ = new Subject<void>();
-  // act = merge(timer(0, 1000), this.weather$)
   constructor(private http: HttpClient) {}
 
   public getUserLocation() {  
