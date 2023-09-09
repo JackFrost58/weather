@@ -5,23 +5,3 @@
   @include flex;
   height: 100%;
 }
-
-@keyframes rotateImage {
-  0% { transform: rotate(0) ; }
-  50% { transform: rotate(180deg)  }
-  100% {  transform: rotate(360deg)  }
-}
-
-@keyframes changeBg {
-  0% { background-color: rgb(0, 132, 255); }
-  50% { background-color: #6fb47e }
-  100% {  background-color: rgb(0, 132, 255)  }
-}
-
-@keyframes iconUpDown {  
-  0%   { transform: scale(1,1)    translateY(0); }
-  10%  { transform: scale(1.1,.9) translateY(0); }
-  30%  { transform: scale(.9,1.1) translateY(-10px); }
-  50%  { transform: scale(1,1)    translateY(0); }
-  100% { transform: scale(1,1)    translateY(0); }
-}
