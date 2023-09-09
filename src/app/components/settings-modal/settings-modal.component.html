@@ -1,0 +1,8 @@
+<section class="modal-container">
+  <div mat-dialog-title class="header">
+    <h3 class="header-title">Settings</h3>
+  </div>
+  <mat-tab-group>
+		<mat-tab *ngFor="let tab of TAB_CONFIG" [label]="tab.labelEn"></mat-tab>
+	</mat-tab-group>
+</section>
